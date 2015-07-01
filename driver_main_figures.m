@@ -21,4 +21,4 @@ load('all_strains_names')
 load('all_strains_vals_vector')
 
 fig5(all_strains_vals_vector, all_strains_names);
-fig6(all_strains_vals_vector, all_strains_names);
+%fig6(all_strains_vals_vector, all_strains_names);

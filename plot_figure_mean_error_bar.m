@@ -31,7 +31,7 @@ hfig=figure('Position',[ 328   198   865   397]);
 hold all;
 
 errorbar(meanDataSorted,standard_error(idx),'ok','MarkerFaceColor',[0.5 0.5 0.5],'MarkerSize',8)
-ylim([-9 -3])
+ylim([-5 2])
 
 xticklabel_rotate(1:length(data_output),45,namesStrains(idx))
 set(gca,'box','off')
