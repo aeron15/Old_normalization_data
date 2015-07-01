@@ -43,7 +43,7 @@ hold all;
 positionVector1 = [0.1, 0.1, 0.6, 0.8];
 subplot('Position',positionVector1)
 errorbar(meanDataSorted,standard_error(idx),'ok','MarkerFaceColor',[0.5 0.5 0.5],'MarkerSize',8)
-ylim([-9 -3])
+ylim([-5 2])
 hline(medianDataSort,'k')
 hline(perc75)
 hline(perc25)

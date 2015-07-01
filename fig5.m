@@ -87,7 +87,7 @@ xlim([0 length(lab)+1]);
 xticklabel_rotate([1:length(lab)],45,lab(loc),'interpreter','tex');
 
 Set_fig_RE(k,9,9,9);
-ylim([-9 -3]);
+ylim([-5 2]);
 
 %filename = ['Paper_figs/fig5_sorted_swaps.pdf'];
 filename = ['fig5_sorted_swaps.pdf'];

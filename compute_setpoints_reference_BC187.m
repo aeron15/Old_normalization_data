@@ -33,13 +33,13 @@ path_data='/Users/RenanEscalante/Dropbox/Phenotypic_diversity/var_analysis_data/
 
 load([path_data 'setpoints_normalized.mat']);
 
-%% Filter data using BC187 set points
+%% Filter data using BC187 set points. Change the code so that set points nore
 
-setpoints_normalized = filter_SetPointsNormalized(setpoints_normalized);
+% setpoints_normalized = filter_SetPointsNormalized(setpoints_normalized);
 
-%% Create variable equivalent to dif_sp.mat from the plot_all_figs_1
+%% Data is normalized using the relative set point of induction
 
-all_strains_vals_vector=cell2mat(setpoints_normalized(:,2));
+all_strains_vals_vector=cell2mat(setpoints_normalized(:,2))-cell2mat(setpoints_normalized(:,1));
 all_strains_names=setpoints_normalized(:,3);
 
 save('all_strains_vals_vector','all_strains_vals_vector');
@@ -229,7 +229,6 @@ filename='Fig5_BC_YJ';
 [AlleleReplacementBackgrounds_mean,AlleleReplacementBackgrounds_std]=compute_fold_difference_across_backgrounds(data_output,StrainsWithBC187Allele_names,StrainsWithYJM978Allele_names)
 
 %% SI figures. Hemizygous hybrid strains
-close all;
 strains={'RYB22';
 'RYB23';
 'RYB24'}
@@ -254,6 +253,9 @@ filename='SOK1_HH';
 
 [h,p]=ttest2(data_output(1).values,data_output(3).values)
 [h,p]=ttest2(data_output(2).values,data_output(3).values)
+
+%%
+close all;
 
 
 
